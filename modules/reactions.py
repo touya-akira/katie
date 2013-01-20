@@ -1,3 +1,4 @@
+#!/usr/bin/python
 def clients(phenny, input):
 	phenny.say('There are several IRC clients for all operating systems. For Windows, we recommend hexchat (Free X-Chat Successor, http://hexchat.org). For Unix/Linux consider X-Chat (GUI) or irssi (console), both available in your repository. For Mac try XChat Aqua (http://xchataqua.github.com/)')
 clients.rule = r'^clients\?'
@@ -21,8 +22,8 @@ i2p.rule = r'^i2p\?'
 
 def python(phenny, input):
 	phenny.say('I recommend: http://learnpythonthehardway.org/')
-learnPython.rule = r'^python\?'
-learnPython.priority = 'medium'
+python.rule = r'^python\?'
+python.priority = 'medium'
 
 def tor(phenny, input):
 	phenny.say('Tor is a network of virtual tunnels that allows people and groups to improve their anonymity and security on the Internet. Read more here: https://www.torproject.org/about/overview.html.en and here https://www.torproject.org/docs/documentation.html.en')
@@ -54,6 +55,7 @@ Logbot.rule = r'.*logbot.*'
 
 #punishment
 
-def troutpatrol(phenny, input):
-	phenny.say('!kick '+ input.nick + ' Trout slaps are incredibly lame. [Troutpatrol]')
-troutpatrol.rule = r'.*trout?'
+def troutpatro(phenny, input):
+	phenny.write(['kick',input.sender,input.nick,'Trout slaps are incredibly lame. [Troutpatrol]'])
+#	phenny.say('!kick '+ input.nick + ' Trout slaps are incredibly lame. [Troutpatrol]')
+troutpatro.rule = r'.*slaps.*trout'
