@@ -5,7 +5,7 @@ clients.rule = r'^clients\?'
 def dnsleaks(phenny, input):
         phenny.say('A DNS leak means that you are using a fixed nameserver (like the one from your provider) which may compromise your anonymity. Read about it here: http://www.dnsleaktest.com/what-is-a-dns-leak.php')
         phenny.say('You can test this on this website: http://www.dnsleaktest.com/ - to prevent DNS leaks when using TOR, read the following: https://trac.   torproject.org/projects/tor/wiki/doc/PreventingDnsLeaksInTor')
-dnsleaks.rule = r'dnsleaks?'
+dnsleaks.rule = r'^dnsleaks\?'
 
 def freevpn(phenny, input):
 	phenny.say('Personally I would not trust any free VPN for the simple reason that if a VPN provider has no product for sale, chances are that they are selling YOU.')
@@ -33,7 +33,7 @@ def vm(phenny, input):
 vm.rule = r'^vm\?'
 
 def vpn(phenny, input):
-        phenny.say('Currently I can recommend two privacy vpn providers, '+     input.nick+': Perfect Privacy (http://perfect-privacy.com) and ovpn (http://ovpn.to)')
+        phenny.say('Currently I can recommend two privacy vpn providers, '+ input.nick +': Perfect Privacy (http://perfect-privacy.com) and ovpn (http://ovpn.to)')
 vpn.rule = r'^vpn\?'
 vpn.priority = 'medium'
 
@@ -51,4 +51,11 @@ topics.rule = "^topics\?"
 def Logbot(phenny, input):
 	phenny.say('lol logbots <3')
 Logbot.rule = r'.*logbot.*'
+
+#punishment
+
+def troutpatrol(phenny, input)
+	phenny.say('!kick '+input.nick+' Trout slaps are incredibly lame. [Troutpatrol]')
+troutpatrol.rule = r'.*trout?$'
+
 
