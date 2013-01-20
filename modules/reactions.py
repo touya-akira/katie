@@ -4,7 +4,7 @@ clients.rule = r'^clients\?'
 
 def dnsleaks(phenny, input):
         phenny.say('A DNS leak means that you are using a fixed nameserver (like the one from your provider) which may compromise your anonymity. Read about it here: http://www.dnsleaktest.com/what-is-a-dns-leak.php')
-        phenny.say('You can test this on this website: http://www.dnsleaktest.com/ - to prevent DNS leaks when using TOR, read the following: https://trac.   torproject.org/projects/tor/wiki/doc/PreventingDnsLeaksInTor')
+        phenny.say('You can test this on this website: http://www.dnsleaktest.com/ - to prevent DNS leaks when using TOR, read the following: https://trac. torproject.org/projects/tor/wiki/doc/PreventingDnsLeaksInTor')
 dnsleaks.rule = r'^dnsleaks\?'
 
 def freevpn(phenny, input):
@@ -12,7 +12,7 @@ def freevpn(phenny, input):
 freevpn.rule = r'^freevpn\?'
 
 def hacking(phenny, input):
-        phenny.say('How to Become a Hacker: http://www.catb.org/esr/faqs/hacker-howto.html')
+	phenny.say('How to Become a Hacker: http://www.catb.org/esr/faqs/hacker-howto.html')
 hacking.rule = r'^hacking\?'
 
 def i2p(phenny, input):
@@ -20,7 +20,7 @@ def i2p(phenny, input):
 i2p.rule = r'^i2p\?'
 
 def python(phenny, input):
-        phenny.say('I recommend: http://learnpythonthehardway.org/')
+	phenny.say('I recommend: http://learnpythonthehardway.org/')
 learnPython.rule = r'^python\?'
 learnPython.priority = 'medium'
 
@@ -33,7 +33,7 @@ def vm(phenny, input):
 vm.rule = r'^vm\?'
 
 def vpn(phenny, input):
-        phenny.say('Currently I can recommend two privacy vpn providers, '+ input.nick +': Perfect Privacy (http://perfect-privacy.com) and ovpn (http://ovpn.to)')
+    phenny.say('Currently I can recommend two privacy vpn providers, '+ input.nick +': Perfect Privacy (http://perfect-privacy.com) and ovpn (http://ovpn.to)')
 vpn.rule = r'^vpn\?'
 vpn.priority = 'medium'
 
@@ -42,8 +42,8 @@ vpn.priority = 'medium'
 
 
 def topics(phenny, input):
-        phenny.say('Currently I can advise about the following topics: clients, freevpn, dnsleaks, hacking, i2p, python, vm, vpn and tor. Use "topic?" to get specific info on a topic.')
-topics.rule = "^topics\?"
+    phenny.say('Currently I can advise about the following topics: clients, freevpn, dnsleaks, hacking, i2p, python, vm, vpn and tor. Use "topic?" to get specific info on a topic.')
+topics.rule = r'^topics\?'
 
 
 #generic stuff
@@ -55,7 +55,5 @@ Logbot.rule = r'.*logbot.*'
 #punishment
 
 def troutpatrol(phenny, input):
-	phenny.say('!kick '+input.nick+' Trout slaps are incredibly lame. [Troutpatrol]')
+	phenny.say('!kick '+ input.nick + ' Trout slaps are incredibly lame. [Troutpatrol]')
 troutpatrol.rule = r'.*trout?'
-
-
