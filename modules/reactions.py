@@ -3,8 +3,8 @@ def clients(phenny, input):
 clients.rule = r'^clients\?'
 
 def dnsleaks(phenny, input):
-        phenny.say('A DNS leak means that you are using a fixed nameserver      (like the one from your provider) which may compromise your anonymity. Read     about it here: http://www.dnsleaktest.com/what-is-a-dns-leak.php')
-        phenny.say('You can test this on this website: http://www.dnsleaktest.  com/ - to prevent DNS leaks when using TOR, read the following: https://trac.   torproject.org/projects/tor/wiki/doc/PreventingDnsLeaksInTor')
+        phenny.say('A DNS leak means that you are using a fixed nameserver (like the one from your provider) which may compromise your anonymity. Read about it here: http://www.dnsleaktest.com/what-is-a-dns-leak.php')
+        phenny.say('You can test this on this website: http://www.dnsleaktest.com/ - to prevent DNS leaks when using TOR, read the following: https://trac.   torproject.org/projects/tor/wiki/doc/PreventingDnsLeaksInTor')
 dnsleaks.rule = r'dnsleaks?'
 
 def freevpn(phenny, input):
@@ -16,7 +16,7 @@ def hacking(phenny, input):
 hacking.rule = r'^hacking\?'
 
 def i2p(phenny, input):
-	phenny.say('I2P is an anonymous network, exposing a simple layer that applications can use to anonymously and securely send messages to each other. http://www.i2p2.de/intro.html - http://www.i2p2.de/faq.html')
+	phenny.say('I2P is an anonymous network, exposing a simple layer that applications can use to anonymously and securely send messages to each other http://www.i2p2.de/intro.html - http://www.i2p2.de/faq.html')
 i2p.rule = r'^i2p\?'
 
 def python(phenny, input):
@@ -25,7 +25,7 @@ learnPython.rule = r'^python\?'
 learnPython.priority = 'medium'
 
 def topics(phenny, input):
-        phenny.say('Currently I can advise about the following topics: clients, freevpn, dnsleaks, hacking, i2p, python, vpn and tor.')
+        phenny.say('Currently I can advise about the following topics: clients,freevpn, dnsleaks, hacking, i2p, python, vpn and tor.')
 topics.rule = "^topics\?"
 
 def tor(phenny, input):
