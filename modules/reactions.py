@@ -24,18 +24,26 @@ def python(phenny, input):
 learnPython.rule = r'^python\?'
 learnPython.priority = 'medium'
 
-def topics(phenny, input):
-        phenny.say('Currently I can advise about the following topics: clients,freevpn, dnsleaks, hacking, i2p, python, vpn and tor.')
-topics.rule = "^topics\?"
-
 def tor(phenny, input):
 	phenny.say('Tor is a network of virtual tunnels that allows people and groups to improve their anonymity and security on the Internet. Read more here: https://www.torproject.org/about/overview.html.en and here https://www.torproject.org/docs/documentation.html.en')
 tor.rule = r'^tor\?'
+
+def vm(phenny, input):
+	phenny.say('Virtual machines allow you to run one operating system emulated within another operating system. Your primary OS can be Windows 7 64-bit, for example, but with enough memory and processing power, you can run Ubuntu and OS X side-by-side within it. More information: http://lifehacker.com/5714966/five-best-virtual-machine-applications')
+vm.rule = r'^vm\?'
 
 def vpn(phenny, input):
         phenny.say('Currently I can recommend two privacy vpn providers, '+     input.nick+': Perfect Privacy (http://perfect-privacy.com) and ovpn (http://ovpn.to)')
 vpn.rule = r'^vpn\?'
 vpn.priority = 'medium'
+
+
+#topics
+
+
+def topics(phenny, input):
+        phenny.say('Currently I can advise about the following topics: clients, freevpn, dnsleaks, hacking, i2p, python, vm, vpn and tor. Use "topic?" to get specific info on a topic.')
+topics.rule = "^topics\?"
 
 
 #generic stuff
