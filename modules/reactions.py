@@ -1,3 +1,11 @@
+def topics(phenny, input):
+	phenny.say('Currently I can advise about the following topics: dnsleaks, hacking, python, vpn.')
+topics.rule = r'topics?'
+
+def hacking(phenny, input):
+	phenny.say('How to Become a Hacker: http://www.catb.org/esr/faqs/hacker-howto.html')
+hacking.rule = r'hacking?'
+
 def learnPython(phenny, input):
 	phenny.say('I recommend: http://learnpythonthehardway.org/')
 learnPython.rule = r'python?'
