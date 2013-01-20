@@ -54,8 +54,8 @@ Logbot.rule = r'.*logbot.*'
 
 #punishment
 
-def troutpatrol(phenny, input)
+def troutpatrol(phenny, input):
 	phenny.say('!kick '+input.nick+' Trout slaps are incredibly lame. [Troutpatrol]')
-troutpatrol.rule = r'.*trout?$'
+troutpatrol.rule = r'.*trout?'
 
 
