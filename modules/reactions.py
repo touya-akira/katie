@@ -1,4 +1,7 @@
 #!/usr/bin/python
+
+import random;
+
 def clients(phenny, input):
 	phenny.say('There are several IRC clients for all operating systems. For Windows, we recommend hexchat (Free X-Chat Successor, http://hexchat.org). For Unix/Linux consider X-Chat (GUI) or irssi (console), both available in your repository. For Mac try XChat Aqua (http://xchataqua.github.com/)')
 clients.rule = r'^clients\?'
@@ -13,12 +16,16 @@ def freevpn(phenny, input):
 freevpn.rule = r'^freevpn\?'
 
 def hacking(phenny, input):
-	phenny.say('How to Become a Hacker: http://www.catb.org/esr/faqs/hacker-howto.html')
+	phenny.say('Becoming a hacker is nothing to be achieved overnight. The typical skillset of a hacker is build on years of coding experience in various languages, plus a good deal of network knowledge. For an outline on how to get there, I recommend the following read: http://www.catb.org/esr/faqs/hacker-howto.html')
 hacking.rule = r'^hacking\?'
 
 def i2p(phenny, input):
 	phenny.say('I2P is an anonymous network, exposing a simple layer that applications can use to anonymously and securely send messages to each other http://www.i2p2.de/intro.html - http://www.i2p2.de/faq.html')
 i2p.rule = r'^i2p\?'
+
+def irch(phenny, input):
+	phenny.say('IRC is Internet Relay Chat - which is where you are chatting right now. More precisely you are on irc.voxanon.net which runs inspircd (http://www.irc-wiki.org/InspIRCd). If you need general IRC help, ask in channel. For recommended IRC clients, type ?clients. For network specific help /join #help')
+irch.rule = r'^irc\?'
 
 def python(phenny, input):
 	phenny.say('I recommend: http://learnpythonthehardway.org/')
@@ -43,7 +50,7 @@ vpn.priority = 'medium'
 
 
 def topics(phenny, input):
-    phenny.say('Currently I can advise about the following topics: clients, freevpn, dnsleaks, hacking, i2p, python, vm, vpn and tor. Use "topic?" to get specific info on a topic.')
+    phenny.say('Currently I can advise about the following topics: clients, freevpn, dnsleaks, hacking, i2p, irc, python, vm, vpn and tor. Use "topic?" to get specific info on a topic.')
 topics.rule = r'^topics\?'
 
 
@@ -52,6 +59,11 @@ topics.rule = r'^topics\?'
 def Logbot(phenny, input):
 	phenny.say('lol logbots <3')
 Logbot.rule = r'.*logbot.*'
+
+def feds(phenny, input):
+   fanswer = random.choice(('I don\'t care about Feds.', 'lolfeds :D', 'To apply as Fed join #feds today!'))
+   phenny.say(fanswer)
+feds.rule = r'(?i)(.*\bfeds\b.*|.*\bfed\b.*)'
 
 #punishment
 
