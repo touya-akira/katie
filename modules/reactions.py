@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import random;
+import time;
 
 def clients(phenny, input):
 	phenny.say('There are several IRC clients for all operating systems. For Windows, we recommend hexchat (Free X-Chat Successor, http://hexchat.org). For Unix/Linux consider X-Chat (GUI) or irssi (console), both available in your repository. For Mac try XChat Aqua (http://xchataqua.github.com/)')
@@ -57,12 +58,15 @@ topics.rule = r'^topics\?'
 #generic stuff
 
 def Logbot(phenny, input):
-	phenny.say('lol logbots <3')
+	time.sleep(2)
+	lanswer = random.choice(('lol logbots <3', 'I pity those who worry about logbots.', input.nick+', you\'re a logbot.'))
+	phenny.say(lanswer)
 Logbot.rule = r'.*logbot.*'
 
 def feds(phenny, input):
-   fanswer = random.choice(('I don\'t care about Feds.', 'lolfeds :D', 'To apply as Fed join #feds today!'))
-   phenny.say(fanswer)
+	time.sleep(2)
+	fanswer = random.choice(('I am a Fed! And so is my wife!', 'I don\'t care about Feds.', 'lolfeds :D', 'To apply as Fed join #feds today!'))
+	phenny.say(fanswer)
 feds.rule = r'(?i)(.*\bfeds\b.*|.*\bfed\b.*)'
 
 #punishment
