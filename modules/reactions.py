@@ -69,6 +69,13 @@ def feds(phenny, input):
 	phenny.say(fanswer)
 feds.rule = r'(?i)(.*\bfeds\b.*|.*\bfed\b.*)'
 
+def tyler(phenny, input):
+	time.sleep(2)
+	tanswer = random.choice(('OMG TYLER TYLER TYLER TYLEEEEER! *flips out*', 'Tyler... isn\'t that something like RefRef?'))
+	phenny.say(tanswer)
+tyler.rule = r'(?i)(.*\btyler\b.*)'
+
+
 #punishment
 
 def troutpatro(phenny, input):
