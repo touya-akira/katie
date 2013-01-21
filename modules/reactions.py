@@ -25,11 +25,11 @@ def i2p(phenny, input):
 i2p.rule = r'^i2p\?'
 
 def irch(phenny, input):
-	phenny.say('IRC is Internet Relay Chat - which is where you are chatting right now. More precisely you are on irc.voxanon.net which runs inspircd (http://www.irc-wiki.org/InspIRCd). If you need general IRC help, ask in channel. For recommended IRC clients, type ?clients. For network specific help /join #help')
+	phenny.say('IRC is Internet Relay Chat - which is where you are chatting right now. More precisely you are on irc.voxanon.net which runs inspircd (http://www.irc-wiki.org/InspIRCd). If you need general IRC help, ask in channel. For recommended IRC clients, type clients?. For network specific help /join #help')
 irch.rule = r'^irc\?'
 
 def python(phenny, input):
-	phenny.say('I recommend: http://learnpythonthehardway.org/')
+	phenny.say('I recommend: http://learnpythonthehardway.org/. A good very comprehensive book on this is O\'Reilly Programming Python. Download the 4th edition here: http://www.par-anoia.net/assessment/books/coding/Programming_Python_-_OReilly_4th_Ed.pdf')
 python.rule = r'^python\?'
 python.priority = 'medium'
 
@@ -75,10 +75,27 @@ def tyler(phenny, input):
 	phenny.say(tanswer)
 tyler.rule = r'(?i)(.*\btyler\b.*)'
 
+def niceday(phenny, input):
+	time.sleep(1)
+	rand = random.randint(1,5)
+	if rand == 1:
+		phenny.say(input.nick+': A nice day to you, too, Sir.')
+niceday.rule = r'(?i)(fuck you)'
+
+#events
+
+def join_shh(phenny, input):
+	time.sleep(1)
+	randm = random.randint(1,20)
+	if (randm == 1):
+		phenny.say('Ehh, but don\'t tell ' + input.nick + '!')
+join_shh.event = 'JOIN'
+join_shh.rule = r'.*'
+
 
 #punishment
 
 def troutpatro(phenny, input):
 	phenny.write(['kick',input.sender,input.nick,'Trout slaps are incredibly lame. [Troutpatrol]'])
 #	phenny.say('!kick '+ input.nick + ' Trout slaps are incredibly lame. [Troutpatrol]')
-troutpatro.rule = r'.*slaps.*trout'
+troutpatro.rule = r'.*slaps.*(trout|fishbot)'
