@@ -82,16 +82,30 @@ def niceday(phenny, input):
 		phenny.say(input.nick+': A nice day to you, too, Sir.')
 niceday.rule = r'(?i)(fuck you)'
 
+
 #events
 
 def join_shh(phenny, input):
 	time.sleep(1)
-	randm = random.randint(1,20)
+	randm = random.randint(1,35)
 	if (randm == 1):
 		phenny.say('Ehh, but don\'t tell ' + input.nick + '!')
 join_shh.event = 'JOIN'
 join_shh.rule = r'.*'
 
+#chatter
+
+def chatter(phenny, input):
+	if (input.sender == '#opnewblood'):
+		randm = random.randint(1,1500)
+		if (randm == 1):
+			phenny.say('We should simply kidnap and kill him and run him through a woodchipper.')
+		elif randm == 2:
+			phenny.say('I am a serious bad ass right now and I\'m not sure you realize that.')
+		elif randm == 3:
+			phenny.say('I am only one removed from the President of the United States!')
+chatter.event = 'PRIVMSG'
+chatter.rule = r'.*'
 
 #punishment
 
