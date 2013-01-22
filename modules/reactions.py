@@ -3,6 +3,8 @@
 import random;
 import time;
 
+random.seed()
+
 def clients(phenny, input):
 	phenny.say('There are several IRC clients for all operating systems. For Windows, we recommend hexchat (Free X-Chat Successor, http://hexchat.org). For Unix/Linux consider X-Chat (GUI) or irssi (console), both available in your repository. For Mac try XChat Aqua (http://xchataqua.github.com/)')
 clients.rule = r'^clients\?'
@@ -96,7 +98,8 @@ join_shh.rule = r'.*'
 #chatter
 
 def chatter(phenny, input):
-	if (input.sender == '#opnewblood'):
+	chan = input.sender
+	if (chan.lower() == '#opnewblood'):
 		randm = random.randint(1,1500)
 		if (randm == 1):
 			phenny.say('We should simply kidnap and kill him and run him through a woodchipper.')
